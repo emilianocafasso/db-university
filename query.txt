@@ -53,3 +53,10 @@ SELECT
 FROM `teachers`
 GROUP BY `office_address`
 HAVING COUNT(*) > 1;
+
+query 11: Calcolare la media dei voti di ogni appello d'esame
+SELECT 
+	`exam_id` AS `id_appello`, 
+    AVG(`vote`) AS `media_voti`
+FROM `exam_student`
+GROUP BY `exam_id`;
